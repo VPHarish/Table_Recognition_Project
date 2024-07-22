@@ -10,14 +10,14 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import google.generativeai as genai
 
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+pytesseract.pytesseract.tesseract_cmd = r"./tesseract"
 
 nlp = spacy.load("en_core_web_sm")
 
 ''' kindly create your own api_key and use in the below configure function.
             You can Use the link in the readme file to create our own api key'''
 
-genai.configure(api_key="PASS YOUR OWN API KEY") 
+genai.configure(api_key="AIzaSyBBccTVQ6GNcLHtdVVVrA3k7KsukfR8tJw") 
 
 def preprocess_text(text):
     text = re.sub(r'[^a-zA-Z0-9\s]', '', text)
